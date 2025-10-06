@@ -1,186 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Event Registration Form</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-max-width: 600px;
-margin: 50px auto;
-padding: 20px;
-background-color: #f4f4f4;
-}
-.form-container {
-background-color: white;
-padding: 30px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Dance Club - Home</title>
+   <style>
+    /* Base Styles for the Dark and Vibrant palette */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Deep Black */
+        color: #FFFFFF; /* White text */
+        line-height: 1.6;
+        text-align: center;
+        overflow: hidden; /* Prevent scrollbars */
+        height: 100vh;
+    }
 
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.form-group {
-margin-bottom: 15px;
-}
-label {
-display: block;
-margin-bottom: 5px;
-font-weight: bold;
-}
-input, select, textarea {
-width: 100%;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 4px;
-font-size: 14px;
-}
-button {
-background-color: #007bff;
-color: white;
-padding: 12px 30px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-font-size: 16px;
-}
-button:hover {
-background-color: #0056b3;
-}
-.error {
-color: red;
-font-size: 12px;
-margin-top: 5px;
-}
-.success {
-color: green;
-font-size: 14px;
-margin-top: 10px;
-}
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* Hero Section (Main Header) */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('BRINDAAA.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Exactly one screen height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        animation: fadeIn 1.5s ease-out;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        font-weight: 900;
+        color: #FFFFFF;
+        text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: #ccc;
+    }
+
+    /* Navigation Buttons */
+    .button-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: #00BFFF; /* Electric Blue */
+        color: #FFFFFF;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    }
+
+    .cta-button:hover {
+        background-color: #00B1E6;
+        transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .button-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /* Keyframe for fade-in effect */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 </style>
+
 </head>
 <body>
-<div class="form-container">
-<h2>Tech Conference 2025 Registration</h2>
-<form id="registrationForm">
-<div class="form-group">
-<label for="fullName">Full Name *</label>
-<input type="text" id="fullName" name="fullName" required>
-<div class="error" id="nameError"></div>
-</div>
-<div class="form-group">
-<label for="email">Email Address *</label>
-<input type="email" id="email" name="email" required>
-<div class="error" id="emailError"></div>
-</div>
-<div class="form-group">
-<label for="phone">Phone Number *</label>
-<input type="tel" id="phone" name="phone" required>
 
-<div class="error" id="phoneError"></div>
-</div>
-<div class="form-group">
-<label for="organization">Organization/Company</label>
-<input type="text" id="organization" name="organization">
-</div>
-<div class="form-group">
-<label for="experience">Experience Level *</label>
-<select id="experience" name="experience" required>
-<option value="">Select your level</option>
+    <header>
+        <div class="hero">
+            <div class="container hero-content">
+                <h1>IGNITE Dance Club</h1>
+                <p>Unleash your rhythm. Join the most dynamic dance community on campus. Auditions are now open!</p>
+                
+                <div class="button-grid">
+                    <a href="about.html" class="cta-button">About IGNITE</a>
+                    <a href="register.html" class="cta-button">Register for Auditions</a>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<option value="beginner">Beginner (0-2 years)</option>
-<option value="intermediate">Intermediate (3-5
-
-years)</option>
-<option value="advanced">Advanced (5+ years)</option>
-</select>
-<div class="error" id="experienceError"></div>
-</div>
-<div class="form-group">
-<label for="interests">Areas of Interest</label>
-<textarea id="interests" name="interests" rows="3"
-placeholder="e.g., AI, Web Development, Mobile Apps"></textarea>
-</div>
-<div class="form-group">
-<label>
-<input type="checkbox" id="newsletter"
-name="newsletter">
-Subscribe to our newsletter
-</label>
-</div>
-<div class="form-group">
-<label>
-<input type="checkbox" id="terms" name="terms"
-required>
-I agree to the terms and conditions *
-</label>
-<div class="error" id="termsError"></div>
-</div>
-<button type="submit">Register Now</button>
-<div class="success" id="successMessage"></div>
-</form>
-</div>
-<script>
-document.getElementById('registrationForm').addEventListener('submit',
-function(e) {
-e.preventDefault();
-// Clear previous errors
-clearErrors();
-// Get form values
-const fullName =
-document.getElementById('fullName').value.trim();
-const email = document.getElementById('email').value.trim();
-
-const phone = document.getElementById('phone').value.trim();
-const experience = document.getElementById('experience').value;
-const terms = document.getElementById('terms').checked;
-let isValid = true;
-// Validate full name
-if (fullName.length < 2) {
-showError('nameError', 'Full name must be at least 2
-characters long');
-isValid = false;
-}
-// Validate email
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailRegex.test(email)) {
-showError('emailError', 'Please enter a valid email
-address');
-isValid = false;
-}
-// Validate phone
-const phoneRegex = /^[0-9]{10}$/;
-if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
-showError('phoneError', 'Please enter a valid 10-digit
-phone number');
-isValid = false;
-}
-// Validate experience
-if (!experience) {
-showError('experienceError', 'Please select your experience
-level');
-isValid = false;
-}
-// Validate terms
-if (!terms) {
-showError('termsError', 'You must agree to the terms and
-conditions');
-isValid = false;
-}
-if (isValid) {
-document.getElementById('successMessage').textContent =
-'Registration successful! Thank you for registering.';
-document.getElementById('registrationForm').reset();
-}
-});
-function showError(elementId, message) {
-document.getElementById(elementId).textContent = message;
-}
-function clearErrors() {
-const errorElements = document.querySelectorAll('.error');
-errorElements.forEach(element => element.textContent = '');
-document.getElementById('successMessage').textContent = '';
-}
-</script>
 </body>
-
 </html>
