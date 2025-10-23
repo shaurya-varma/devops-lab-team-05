@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IGNITE Dance Club</title>
+    <style>
+        /* Base Styles - Matching IGNITE Theme */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('BRINDAAA.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFFFFF;
+            text-align: center;
+            overflow: hidden; /* Prevent scrollbars */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #FFFFFF;
+            text-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(17, 17, 17, 0.85);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+        }
+
+        button {
+            background-color: #00BFFF;
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #00A9E0;
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: transparent;
+            border: 1px solid #00BFFF;
+            color: #00BFFF;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #00BFFF;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Got questions, feedback, or want to collaborate? We'd love to hear from you!</p>
+
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> igniteclub@college.edu</p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/students_aimscs" target="_blank">@students_page</a></p>
+            <p><strong>Location:</strong> Student Activity Center</p>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+</body>
+</html>
