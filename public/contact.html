@@ -146,5 +146,16 @@
         <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
 
+    <script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent the page from reloading
+        alert("Thank you! You will be contacted soon."); // Message to the user
+        form.reset(); // Optional: clears the form fields
+    });
+</script>
+
+
 </body>
 </html>
